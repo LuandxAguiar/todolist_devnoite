@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="505.0" prefWidth="544.0" style="-fx-background-color: #98f2f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.luanfx.todolist.controller.IndexController">
+   <children>
+      <DatePicker fx:id="dataR" layoutX="14.0" layoutY="65.0" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="108.0" text="Data de Realização" />
+      <TextField fx:id="descTarefa" layoutX="14.0" layoutY="124.0" prefHeight="25.0" prefWidth="502.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="statusT" layoutX="15.0" layoutY="186.0" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="14.0" layoutY="107.0" prefHeight="17.0" prefWidth="140.0" text="Descreva a Tarefa" />
+      <Label layoutX="15.0" layoutY="169.0" text="Status" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="169.0" />
+      <Label layoutX="20.0" layoutY="236.0" text="Comentário sobre a tarefa" AnchorPane.bottomAnchor="252.0" />
+      <TextArea fx:id="comenta" layoutX="14.0" layoutY="253.0" prefHeight="150.0" prefWidth="502.0" promptText="Descreva como concluir essa tarefa " AnchorPane.leftAnchor="14.0" />
+      <Button fx:id="btSalvar" layoutX="15.0" layoutY="427.0" mnemonicParsing="false" onAction="#btClickSa" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="15.0">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Salvar" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btAdiar" layoutX="90.0" layoutY="424.0" mnemonicParsing="false" onAction="#btClickAd" prefHeight="65.0" prefWidth="66.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="90.0">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/calendar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Adiar" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btConcluir" layoutX="166.0" layoutY="423.0" mnemonicParsing="false" onAction="#btClickCo" prefHeight="74.0" prefWidth="52.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="166.0">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/concluido.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Adiar Tarefa" />
+         </tooltip></Button>
+      <Button fx:id="btExcluir" layoutX="363.0" layoutY="420.0" mnemonicParsing="false" onAction="#btClickEx" prefHeight="74.0" prefWidth="52.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="363.0">
+         <tooltip>
+            <Tooltip text="Excluir" />
+         </tooltip>
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/lixeira.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btLimpar" layoutX="455.0" layoutY="419.0" mnemonicParsing="false" onAction="#btClickLi" prefHeight="81.0" prefWidth="100.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="455.0">
+         <tooltip>
+            <Tooltip text="Limpar" />
+         </tooltip>
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/borracha.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="163.0" prefHeight="38.0" prefWidth="272.0" text="Lista de Tarefas" AnchorPane.leftAnchor="163.0">
+         <font>
+            <Font name="Ebrima Bold" size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
