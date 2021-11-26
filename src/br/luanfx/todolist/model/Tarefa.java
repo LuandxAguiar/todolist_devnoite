@@ -1,6 +1,7 @@
 package br.luanfx.todolist.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
 	private long id;
@@ -95,6 +96,25 @@ public class Tarefa {
 		this.status = status;
 	}
 	
+	public String formatToSave() {
+		// contrutor de string 
+		StringBuilder builder = new StringBuilder();
+		builder.append(this.getId()+";");
+		// data formato brasileiro.
+		DateTimeFormatter padraoData 
+					= DateTimeFormatter.ofPattern("dd/MMM/yyyy");
+		builder.append(this.getDataCriacao().format(padraoData)+";");
+		builder.append(this.getDataLimite().format(padraoData)+";");
+		if(this.getDataConcluida() != null) {
+			builder.append(this.getDataConcluida().format(padraoData));
+		}
+		builder.append(";");
+		builder.append(this.getDescricao()+";");
+		builder.append(this.getComentarios()+";");
+		builder.append(this.getStatus().ordinal()+"\n");
+		
+		return builder.toString();
+	}
 
 	
 	

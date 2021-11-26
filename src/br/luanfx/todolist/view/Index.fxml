@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Tooltip?>
@@ -11,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="505.0" prefWidth="544.0" style="-fx-background-color: #98f2f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.luanfx.todolist.controller.IndexController">
+<AnchorPane prefHeight="505.0" prefWidth="1032.0" style="-fx-background-color: #98f2f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.luanfx.todolist.controller.IndexController">
    <children>
       <DatePicker fx:id="dataR" layoutX="14.0" layoutY="65.0" AnchorPane.leftAnchor="14.0" />
       <Label layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="108.0" text="Data de Realização" />
@@ -83,5 +85,11 @@
             <Font name="Ebrima Bold" size="37.0" />
          </font>
       </Label>
+      <TableView fx:id="tvTarefa" layoutX="559.0" layoutY="48.0" prefHeight="460.0" prefWidth="473.0">
+        <columns>
+          <TableColumn fx:id="tcData" prefWidth="141.0" text="Data" />
+          <TableColumn fx:id="tcTarefa" minWidth="0.0" prefWidth="331.0" text="Tarefa" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
