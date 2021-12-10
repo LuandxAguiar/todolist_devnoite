@@ -3,6 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -15,12 +18,12 @@
 
 <AnchorPane prefHeight="505.0" prefWidth="1032.0" style="-fx-background-color: #98f2f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.luanfx.todolist.controller.IndexController">
    <children>
-      <DatePicker fx:id="dataR" layoutX="14.0" layoutY="65.0" AnchorPane.leftAnchor="14.0" />
-      <Label layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="108.0" text="Data de Realização" />
-      <TextField fx:id="descTarefa" layoutX="14.0" layoutY="124.0" prefHeight="25.0" prefWidth="502.0" AnchorPane.leftAnchor="14.0" />
-      <TextField fx:id="statusT" layoutX="15.0" layoutY="186.0" AnchorPane.leftAnchor="14.0" />
-      <Label layoutX="14.0" layoutY="107.0" prefHeight="17.0" prefWidth="140.0" text="Descreva a Tarefa" />
-      <Label layoutX="15.0" layoutY="169.0" text="Status" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="169.0" />
+      <DatePicker fx:id="dataR" layoutX="127.0" layoutY="91.0" AnchorPane.leftAnchor="127.0" />
+      <Label layoutX="149.0" layoutY="66.0" prefHeight="25.0" prefWidth="108.0" text="Data de Realização" />
+      <TextField fx:id="descTarefa" layoutX="26.0" layoutY="147.0" prefHeight="25.0" prefWidth="502.0" AnchorPane.leftAnchor="26.0" />
+      <TextField fx:id="statusT" layoutX="173.0" layoutY="196.0" prefHeight="25.0" prefWidth="132.0" AnchorPane.leftAnchor="173.0" />
+      <Label layoutX="169.0" layoutY="130.0" prefHeight="17.0" prefWidth="140.0" text="Descreva a Tarefa" />
+      <Label layoutX="214.0" layoutY="179.0" prefHeight="17.0" prefWidth="59.0" text="Status" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="759.0" AnchorPane.topAnchor="179.0" />
       <Label layoutX="20.0" layoutY="236.0" text="Comentário sobre a tarefa" AnchorPane.bottomAnchor="252.0" />
       <TextArea fx:id="comenta" layoutX="14.0" layoutY="253.0" prefHeight="150.0" prefWidth="502.0" promptText="Descreva como concluir essa tarefa " AnchorPane.leftAnchor="14.0" />
       <Button fx:id="btSalvar" layoutX="15.0" layoutY="427.0" mnemonicParsing="false" onAction="#btClickSa" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="15.0">
@@ -56,7 +59,7 @@
             </ImageView>
          </graphic>
          <tooltip>
-            <Tooltip text="Adiar Tarefa" />
+            <Tooltip text="Concluir Tarefa" />
          </tooltip></Button>
       <Button fx:id="btExcluir" layoutX="363.0" layoutY="420.0" mnemonicParsing="false" onAction="#btClickEx" prefHeight="74.0" prefWidth="52.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="363.0">
          <tooltip>
@@ -80,7 +83,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Label layoutX="163.0" prefHeight="38.0" prefWidth="272.0" text="Lista de Tarefas" AnchorPane.leftAnchor="163.0">
+      <Label layoutX="279.0" layoutY="24.0" prefHeight="38.0" prefWidth="272.0" text="Lista de Tarefas" AnchorPane.leftAnchor="279.0">
          <font>
             <Font name="Ebrima Bold" size="37.0" />
          </font>
@@ -91,5 +94,24 @@
           <TableColumn fx:id="tcTarefa" minWidth="0.0" prefWidth="331.0" text="Tarefa" />
         </columns>
       </TableView>
+      <TextField fx:id="tfID" editable="false" layoutX="42.0" layoutY="91.0" prefHeight="25.0" prefWidth="53.0" />
+      <Label layoutX="49.0" layoutY="70.0" text="Código" />
+      <DatePicker fx:id="dtConcluida" disable="true" editable="false" layoutX="345.0" layoutY="90.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #33ff99; -fx-border-color: black;" />
+      <Label fx:id="lbDataConcluida" layoutX="374.0" layoutY="70.0" text="Data Concluída" textFill="#030303" />
+      <MenuBar layoutX="2.0" layoutY="2.0" style="-fx-background-color: #B0C4DE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+              <MenuItem mnemonicParsing="false" onAction="#miExport" text="Exportar como Html" />
+              <MenuItem mnemonicParsing="false" onAction="#miSair" text="Sair" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#miSobre" text="Sobre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
