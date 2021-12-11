@@ -254,7 +254,7 @@ public class IndexController implements Initializable, ChangeListener<Tarefa> {
 			AnchorPane root = (AnchorPane) FXMLLoader
 					.load(getClass().getResource("/br/luanfx/todolist/view/Sobre.fxml"));
 			Scene scene = new Scene(root, 360, 400);
-			scene.getStylesheets().add(getClass().getResource("../view/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/br/luanfx/todolist/view/application.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
 			stage.initStyle(StageStyle.UNDECORATED);
@@ -326,9 +326,9 @@ public class IndexController implements Initializable, ChangeListener<Tarefa> {
 				} else if (item.getDataLimite().isBefore(LocalDate.now())) {
 					setStyle("-fx-background-color: tomato");
 				} else if (item.getStatus() == StatusTarefa.ADIADA) {
-					setStyle("-fx-backgroun-color: #ff5");
-				} else {
-					setStyle("-fx-backgroun-color: cyan");
+					setStyle("-fx-backgroun-color: yellow");
+				} else if(item.getStatus() == StatusTarefa.ABERTA) {
+					setStyle("-fx-backgroun-color: #00FFFF");
 				}
 			};
 		});

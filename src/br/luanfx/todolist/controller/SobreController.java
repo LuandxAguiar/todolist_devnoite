@@ -3,6 +3,7 @@ package br.luanfx.todolist.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class SobreController {
 
@@ -11,6 +12,9 @@ public class SobreController {
 	   
 	    @FXML
 	    public void btSair(ActionEvent event) {
-	    	System.exit(0);
+	    	//metodo para fechar a janela sobre
+	    	Stage stage = (Stage)aboutBt.getScene().getWindow();
+	    	stage.close();
+	    	
 	    }
 }

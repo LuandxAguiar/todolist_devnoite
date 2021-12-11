@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="505.0" prefWidth="1032.0" style="-fx-background-color: #98f2f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.luanfx.todolist.controller.IndexController">
+<AnchorPane prefHeight="505.0" prefWidth="1032.0" style="-fx-background-color: #00c5fd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.luanfx.todolist.controller.IndexController">
    <children>
       <DatePicker fx:id="dataR" layoutX="127.0" layoutY="91.0" AnchorPane.leftAnchor="127.0" />
       <Label layoutX="149.0" layoutY="66.0" prefHeight="25.0" prefWidth="108.0" text="Data de Realização" />
@@ -26,7 +26,7 @@
       <Label layoutX="214.0" layoutY="179.0" prefHeight="17.0" prefWidth="59.0" text="Status" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="759.0" AnchorPane.topAnchor="179.0" />
       <Label layoutX="20.0" layoutY="236.0" text="Comentário sobre a tarefa" AnchorPane.bottomAnchor="252.0" />
       <TextArea fx:id="comenta" layoutX="14.0" layoutY="253.0" prefHeight="150.0" prefWidth="502.0" promptText="Descreva como concluir essa tarefa " AnchorPane.leftAnchor="14.0" />
-      <Button fx:id="btSalvar" layoutX="15.0" layoutY="427.0" mnemonicParsing="false" onAction="#btClickSa" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="15.0">
+      <Button fx:id="btSalvar" layoutX="15.0" layoutY="427.0" mnemonicParsing="false" onAction="#btClickSa" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: #00c5fd;" AnchorPane.leftAnchor="15.0">
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -38,19 +38,12 @@
             <Tooltip text="Salvar" />
          </tooltip>
       </Button>
-      <Button fx:id="btAdiar" layoutX="90.0" layoutY="424.0" mnemonicParsing="false" onAction="#btClickAd" prefHeight="65.0" prefWidth="66.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="90.0">
-         <graphic>
-            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagens/calendar.png" />
-               </image>
-            </ImageView>
-         </graphic>
+      <Button fx:id="btAdiar" layoutX="90.0" layoutY="424.0" mnemonicParsing="false" onAction="#btClickAd" prefHeight="65.0" prefWidth="66.0" style="-fx-background-color: #00c5fd;" AnchorPane.leftAnchor="90.0">
          <tooltip>
             <Tooltip text="Adiar" />
          </tooltip>
       </Button>
-      <Button fx:id="btConcluir" layoutX="166.0" layoutY="423.0" mnemonicParsing="false" onAction="#btClickCo" prefHeight="74.0" prefWidth="52.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="166.0">
+      <Button fx:id="btConcluir" layoutX="166.0" layoutY="423.0" mnemonicParsing="false" onAction="#btClickCo" prefHeight="74.0" prefWidth="52.0" style="-fx-background-color: #00c5fd;" AnchorPane.leftAnchor="166.0">
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -61,28 +54,21 @@
          <tooltip>
             <Tooltip text="Concluir Tarefa" />
          </tooltip></Button>
-      <Button fx:id="btExcluir" layoutX="363.0" layoutY="420.0" mnemonicParsing="false" onAction="#btClickEx" prefHeight="74.0" prefWidth="52.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="363.0">
+      <Button fx:id="btExcluir" layoutX="375.0" layoutY="416.0" mnemonicParsing="false" onAction="#btClickEx" prefHeight="81.0" prefWidth="81.0" style="-fx-background-color: #00c5fd;" AnchorPane.leftAnchor="375.0">
          <tooltip>
             <Tooltip text="Excluir" />
          </tooltip>
          <graphic>
             <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagens/lixeira.jpg" />
+                  <Image url="@../imagens/lixeira.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="btLimpar" layoutX="455.0" layoutY="419.0" mnemonicParsing="false" onAction="#btClickLi" prefHeight="81.0" prefWidth="100.0" style="-fx-background-color: #98f2f1;" AnchorPane.leftAnchor="455.0">
+      <Button fx:id="btLimpar" layoutX="455.0" layoutY="419.0" mnemonicParsing="false" onAction="#btClickLi" prefHeight="81.0" prefWidth="100.0" style="-fx-background-color: #00c5fd;" AnchorPane.leftAnchor="455.0">
          <tooltip>
             <Tooltip text="Limpar" />
-         </tooltip>
-         <graphic>
-            <ImageView fitHeight="57.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagens/borracha.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
+         </tooltip></Button>
       <Label layoutX="279.0" layoutY="24.0" prefHeight="38.0" prefWidth="272.0" text="Lista de Tarefas" AnchorPane.leftAnchor="279.0">
          <font>
             <Font name="Ebrima Bold" size="37.0" />
@@ -113,5 +99,15 @@
           </Menu>
         </menus>
       </MenuBar>
+      <ImageView fitHeight="74.0" fitWidth="73.0" layoutX="91.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/calendar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="74.0" layoutX="470.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/borracha.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

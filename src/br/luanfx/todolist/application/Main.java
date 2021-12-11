@@ -12,11 +12,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
+		
+		
 		try {
 			TarefaIO.createFiles();
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/br/luanfx/todolist/view/Index.fxml"));
-			Scene scene = new Scene(root,1032,505);
-			scene.getStylesheets().add(getClass().getResource("../view/application.css").toExternalForm());
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/br/luanfx/todolist/view/Login.fxml"));
+			Scene scene = new Scene(root,312,305);
+			scene.getStylesheets().add(getClass().getResource("/br/luanfx/todolist/view/application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Todo Do List");
 			primaryStage.getIcons().add (new Image(getClass().getResourceAsStream("/br/luanfx/todolist/imagens/iconeTD.jpg")));
@@ -24,9 +26,11 @@ public class Main extends Application {
 			
 		} catch(Exception e) {
 			e.printStackTrace();
+		
 		}
 		
 	}
+	
 	
 	public static void main(String[] args) {
 		launch(args);
